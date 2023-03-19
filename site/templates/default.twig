@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			{% block title %}
+				{{ page.title ~ ' | ' ~ site.title}}
+			{% endblock %}
+		</title>
+		{{ vcss() }}
+	</head>
+	<body class="antialiased text-slate-500 bg-slate-200 from-slate-50 bg-gradient-to-bl">
+		{% block main %}
+			<main class="h-screen w-screen flex items-center justify-center">
+				<div class="text-center">
+					<h1 class="text-6xl mb-4 font-black text-slate-800">{{ site.title }}</h1>
+					<p class="text-xl text-slate-500">Powered by
+						<a href="https://vitejs.dev/" target="_blank">Vite</a>,
+						<a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>
+						and
+						<a href="https://alpinejs.dev/" target="_blank">Alpine.js</a>
+					</p>
+				</p>
+			</div>
+		</body>
+	</html>
+</main>{% endblock %}{% block scripts %}
+{{ vjs()}}{% endblock %}</body></html>

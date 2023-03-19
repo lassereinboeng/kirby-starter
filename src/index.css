@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main a {
+	@apply underline underline-offset-4 decoration-slate-300;
+}
